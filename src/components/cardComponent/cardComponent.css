@@ -1,0 +1,41 @@
+/* cardComponent.css */
+.card-container {
+    box-shadow: rgba(10, 10, 82, 0.2) 0px 3px 34px 0px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-image {
+    max-width: 100%;
+    height: 15rem;
+    object-fit: cover;
+}
+
+.card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 0 10px;
+}
+
+.product-description {
+    font-size: small;
+    max-width: 100%;
+}
+
+.price-container {
+    text-align: center;
+    color: rgb(98, 183, 240);
+    font-weight: bold;
+}
+
