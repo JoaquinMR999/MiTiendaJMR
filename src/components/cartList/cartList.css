@@ -1,0 +1,32 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd; /* Añadido un borde para mejorar la visualización */
+    border-radius: 8px; /* Añadido un borde redondeado */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.total {
+    width: 100%; /* Cambiado el ancho al 100% para ocupar todo el contenedor */
+    text-align: right;
+    margin-top: 20px; /* Añadido un margen superior para separar el total del contenido anterior */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Peso de la fuente ajustado */
+}
+
+/* Agregados algunos estilos para mejorar la apariencia */
+p {
+    margin: 20px 0;
+    font-style: italic;
+    color: #666;
+}
+
+.cart-container p {
+    text-align: center;
+    margin-top: 10px;
+}

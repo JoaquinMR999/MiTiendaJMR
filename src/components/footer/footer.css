@@ -1,16 +1,21 @@
 .footer-container{
-    background-color: rgb(202, 86, 27);
-    color: rgb(249, 249, 250);
-    margin-top: 3rem;
+    background-color: rgb(44, 44, 44);
+    color: aliceblue;
+    margin-top: 2rem;
 }
 .footer-info{
     display: flex;
     justify-content: center;
 }
-
+.contact-info, .social-media-info, .address-info{
+    list-style: none;
+}
+.contact-info > li, .social-media-info > li, .address-info > li {
+    margin: 0.25rem;
+}
 .copyright{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid rgb(190, 11, 11);
+    border-top: 1px solid rgb(83, 83, 83);
 }

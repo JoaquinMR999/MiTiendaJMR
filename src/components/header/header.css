@@ -1,8 +1,12 @@
-.header{
-    background-color: rgb(44, 44, 44);
-    color: aliceblue;
+.header {
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
 }
-.header-item-list{
+
+.header-item-list {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -10,13 +14,33 @@
     height: 4rem;
     margin: 0;
     padding: 0;
-} 
-.list-item{
-    margin: 0 0.5rem 0 0.5rem;
-    
 }
-.buscador{
-    width: 55vw;
+
+.list-item {
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.list-item:hover {
+    color: #a5a5a5;
+}
+
+.buscador {
+    width: 50vw;
     border-radius: 1rem;
     padding: 0.5rem;
+    border: 1px solid #ccc;
 }
+
+.cart-item-count {
+    position: relative;
+    top: -1rem;
+    right: 0.2rem;
+    background-color: #2893db;
+    color: #fff;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
