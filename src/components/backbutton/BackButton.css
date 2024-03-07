@@ -1,20 +1,6 @@
-.loginContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem
-}
-.loginForm{
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-}
-
-
 .button-6 {
     align-items: center;
-    background-color: #1b62fc;
+    background-color: #929292;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;

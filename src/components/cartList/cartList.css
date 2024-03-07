@@ -1,32 +1,27 @@
-.cart-container {
+.cart-container{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd; /* Añadido un borde para mejorar la visualización */
-    border-radius: 8px; /* Añadido un borde redondeado */
+    flex-direction: column;
 }
 
-h2 {
-    margin-bottom: 10px;
+.cart-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
 }
 
-.total {
-    width: 100%; /* Cambiado el ancho al 100% para ocupar todo el contenedor */
-    text-align: right;
-    margin-top: 20px; /* Añadido un margen superior para separar el total del contenido anterior */
-    font-size: 18px; /* Tamaño de fuente ajustado */
-    font-weight: bold; /* Peso de la fuente ajustado */
+.buttonCheckout, .buttonRemove {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border-color: aliceblue;
+    color: aliceblue;
 }
 
-/* Agregados algunos estilos para mejorar la apariencia */
-p {
-    margin: 20px 0;
-    font-style: italic;
-    color: #666;
+.buttonCheckout {
+    background-color: rgb(40, 147, 219);
 }
-
-.cart-container p {
-    text-align: center;
-    margin-top: 10px;
+.buttonRemove {
+    background-color: rgb(212, 46, 46);
 }

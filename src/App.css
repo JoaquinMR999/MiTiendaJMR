@@ -1,57 +1,19 @@
 :root {
-    --bg-color-light: rgb(239, 234, 234);
+    --bg-color-light: white;
     --text-color-light: black;
     --bg-color-dark: rgb(49, 49, 49);
     --text-color-dark: aliceblue;
     --bg-color-dark-cart: rgb(20, 20, 20);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.header {
-    position: fixed;
-
-    width: 98%;
-  
-    
-}
-
-body {
-    margin-top: 0px;
-    padding-top: 0px;
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.9s, color 0.9s ease-in-out;
-    height: 100vh;
-    margin-top: 4rem; /* Ajustado para dejar espacio para el encabezado */
-    z-index: 1;
-}
-
-body.dark {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
-
-.cart-container {
+#body {
+    margin: 0;
+    padding: 0;
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
     transition: background-color 0.2s, color 0.2s ease-in-out;
 }
-
-.cart-container.dark {
-    background-color: var(--bg-color-dark-cart);
-    color: var(--text-color-dark);
-}
-
-.footer {
-    background-color: var(--bg-color-light);
-    color: var(--text-color-light);
-    padding: 1rem;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 100;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
-}
-
-.footer.dark {
+#body.dark {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
 }
