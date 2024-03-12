@@ -1,0 +1,36 @@
+.header{
+    background-color: rgb(44, 44, 44);
+    color: aliceblue;
+}
+.header-item-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+} 
+.list-item{
+    margin: 0 0.6rem 0 0.6rem;
+    cursor: pointer;
+}
+.list-item:hover{
+    color: rgb(40, 147, 219);
+    transition: ease-in-out;
+}
+.buscador{
+    width: 50vw;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.cart-item-count {
+    position: relative;
+    top: -1rem;
+    right: 0.2rem;
+    background-color: rgb(40, 147, 219);
+    color: aliceblue;
+    padding: 4px;
+    border-radius: 50%;
+    font-size: 12px;
+}
