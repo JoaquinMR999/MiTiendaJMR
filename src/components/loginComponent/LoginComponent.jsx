@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import './loginComponent.css';
+import BackButton from '../backbutton/BackButton'
 
-const LoginComponent = ({ onLogin, onLogout, isLoggedIn, user }) => {
+export default function LoginComponent({ onLogin, onLogout, isLoggedIn, user}){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
 
@@ -14,62 +14,38 @@ const LoginComponent = ({ onLogin, onLogout, isLoggedIn, user }) => {
         e.preventDefault();
         onLogin(name, email);
         setEmail('');
-        setName('');
-        navigate(location.state.pathname);
-        alert('¡Has iniciado sesión!');
-    };
+        setName('')
+        if (location.state!= null) {
+            navigate(location.state.pathname)
+        }
+    }
 
     const handleLogout = (e) => {
         e.preventDefault();
         onLogout();
-        navigate('/');
-    };
+        navigate("/");
+    }
 
-    return (
+    return(
         <section className="loginContainer">
-            {!isLoggedIn && (
-                <form className='loginForm' onSubmit={handleLogin}>
-                    <label htmlFor="name">Nombre:</label>
-                    <input
-                        type="text"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <button className="button-6" type="submit" >
-                        Iniciar sesion
-                    </button>
-                </form>
-            )}
-
-            {isLoggedIn && (
-                <div>
-                    <button type="button" className="button-6"  onClick={handleLogout}>
-                        Cerrar sesión
-                    </button>
-                    <p>¿{user.name}, quieres cerrar la sesión?</p>
-                </div>
-            )}
+            <form action="" className='loginForm'>
+                <label htmlFor="name">Nombre:</label>
+                <input type="text" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+                <label htmlFor="email">Email:</label>
+                <input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                {!isLoggedIn ? (
+                    <>
+                        <button className='loginButton' onClick={handleLogin}>Login</button>
+                    </>
+                ) : (
+                    <>
+                        <button className="logoutButton" onClick={handleLogout}>Logout</button>
+                        <p>¿{user.name}, quieres cerrar la sesión?</p>
+                        <BackButton></BackButton>
+                        
+                    </>
+                )}
+            </form>
         </section>
     );
-};
-
-LoginComponent.propTypes = {
-    onLogin: PropTypes.func.isRequired,
-    onLogout: PropTypes.func.isRequired,
-    isLoggedIn: PropTypes.bool.isRequired,
-    user: PropTypes.shape({
-        name: PropTypes.string,
-    }),
-};
-
-export default LoginComponent;
+}

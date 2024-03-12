@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom"
-import BackButton from "../components/backbutton/BackButton";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const NotFound = () => {
-    
-    
-    return (
-        <div>
-            <h1>ERROR 404: PAGE NOT FOUND</h1>
-            <Link to="/">Pulsa aqui para volver a la página principal</Link>
-            <BackButton />
-        </div>
-    )
-}
+const NotFoundPage = () => {
+  return (
+    <div className="not-found-container">
+      <div className="not-found-content">
+        <h1 className="not-found-title">¡Error 404 - Página no encontrada!</h1>
+        <p className="not-found-message">Lo sentimos, la página que estás buscando no existe.</p>
+        <Link to="/" className="not-found-link">Volver al inicio</Link>
+      </div>
+    </div>
+  );
+};
 
-export default NotFound;
+export default NotFoundPage;

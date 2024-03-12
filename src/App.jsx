@@ -1,23 +1,19 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react';
-import Header from './components/header/Header';
+import Header from './components/header2/Header';
 import Discount from './components/discount/DiscountMessage';
 import Footer from './components/footer/Footer';
 import CardList from './components/cardList/CardList';
 import CartList from './components/cartList/CartList';
-import AddButton from './components/addbutton/AddButton';
-
 import { ThemeContext } from './context/ThemeContext';
 import { useAuth } from './context/AuthContext';
-
 import './App.css'
-
-import productsData from '../data.json';
 import LoginComponent from './components/loginComponent/LoginComponent';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProductDetails from './components/productDetails/ProductDetails';
 import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
 import NotFound from './views/NotFound';
+
 
 function App() {
   const [filter, setFilter] = useState("");
@@ -45,13 +41,13 @@ function App() {
   }
 
   const handleCheckout = () => {
-    
-    alert("Confirma su compra");
+    setCart([]);
+    alert("Serás redirigido a la pagina de tramitación del pedido");
   }
 
   const handleRemoveFromCart = () => {
     setCart([]);
-    alert("Ya no hay productos en tu carrito");
+    alert("El carrito se ha vaciado correctamente");
   }
 
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
@@ -66,7 +62,7 @@ function App() {
           <Discount message={"¡20% de descuento para nuevos clientes!"}/>
         )}
         <Routes>
-          <Route path='/' element={<CardList products={productsData} filter={filter} addToCart={addToCart}/>}/>
+          <Route path='/' element={<CardList filter={filter} addToCart={addToCart}/>}/>
           <Route path='/cart' element={
             <ProtectedRoute>
               <CartList cart={cart} onCheckout={handleCheckout} onRemoveFromCart={handleRemoveFromCart}/>
