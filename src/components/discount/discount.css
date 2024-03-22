@@ -1,18 +1,36 @@
-.discount-container{
+.discount-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
 }
-.discount-section{
+
+.discount-section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(black, rgb(32, 58, 83));
-    height: 4rem;
-    border-radius: 0.5rem;
+    background: linear-gradient(rgb(1, 22, 43), #0c3c5d); /* Gradiente azul */
+    height: 6rem; /* Aumentamos la altura */
+    border-radius: 1rem; /* Aumentamos el radio de borde */
     width: 80vw;
+    max-width: 600px; /* Limitamos el ancho máximo */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    border: 5px solid #ff4d4f; /* Borde rojo */
+    animation: borderPulse 1.5s infinite alternate; /* Animación del borde */
+
+ 
 }
-.message{
-    color: aliceblue;
+@keyframes borderPulse {
+    from {
+        border-color: #f7e600; /* Color inicial del borde */
+    }
+    to {
+        border-color: #ff0000; /* Color final del borde */
+    }
+}
+.message {
+    color: #F0F4F8; /* Blanco más suave */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    text-align: center; /* Centrar texto */
+    font-weight: bold; /* Negrita */
 }

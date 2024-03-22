@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-
+import { useEffect } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
@@ -23,6 +23,17 @@ export const AuthProvider = ({children}) => {
         setIsLoggedIn(false);
         localStorage.removeItem('user');
     }
+    useEffect(() => {
+        const handleBeforeUnload = (e) => {
+            logout();
+        };
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+            window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
+    }, []);
 
     return (
         <AuthContext.Provider value={{ user, isLoggedIn, login, logout, setIsAddProductModalOpen }}>

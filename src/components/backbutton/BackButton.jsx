@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./BackButton.css";
 
 
-const BackButton = () => {
+function BackButton  ()  {
     return (
         <div className="back-button">
             <Link to="/" className="link_style_none">

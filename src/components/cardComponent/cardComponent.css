@@ -1,10 +1,12 @@
 @import '../../App.css';
 
 .card-container {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    padding: 10px;
-    margin: 10px;
-    width: 15%;
+    box-shadow: rgba(9, 9, 82, 0.507) 0px 7px 29px 0px;
+    padding: 23px;
+    margin-top: 30px;
+    margin-left:5px;
+    margin-right: 3px;
+    width: 16%;
     background-color: var(--bg-color-light);
     color: var(--text-color-light);
     position: relative;
@@ -16,7 +18,7 @@
 
 .card-image {
     max-width: 100%;
-    height: 15rem;
+    height: 12rem;
     object-fit: cover;
 }
 
@@ -30,17 +32,13 @@
     padding: 0 10px;
 }
 
-.product-description {
-    font-size: small;
-    max-width: 100%;
-}
 
 .price-container {
     color: rgb(40, 147, 219);
 }
 
 #detailsButton {
-    background-color: rgb(40, 147, 219);
+    background-color: rgba(4, 14, 100, 0.829);
     color: aliceblue;
     height: 2rem;
     width: 100%;
@@ -48,39 +46,20 @@
     border-color: white;
     cursor: pointer;
 }
-.link_style_none {
-    color: aliceblue;
-    text-decoration: none;
-}
-.link_style_none:hover {
-    color: rgb(40, 147, 219);
-    transition: 0.2s ease-in-out;
-}
+
 .admin_utils {
     position: absolute;
     right: 0.5rem;
     list-style: none;
-    top: 0.5rem;
+    top: 0.9rem;
 }
 .admin_utils > li {
     margin: 0.5rem 0.2rem 0 0;
-    color: rgb(212, 46, 46);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 .admin_utils > li:hover {
-    color: rgb(40, 147, 219);
+    color: rgb(255, 1, 1);
 }
 
-/* Estilos del scrollbar */
-/* .card-content::-webkit-scrollbar {
-    width: 2px;
-  }
-  
-  .card-content::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0);
-  }
-  
-  .card-content::-webkit-scrollbar-track {
-    background-color: #5a5a5a;
-  } */

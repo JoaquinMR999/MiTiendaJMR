@@ -1,21 +1,31 @@
-.footer-container{
-    background-color: rgb(44, 44, 44);
-    color: aliceblue;
-    margin-top: 2rem;
+.footer-container {
+    background-color: #0f253a;
+    padding: 20px;
+    color: #ffffff;
 }
-.footer-info{
+
+.footer-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
-.contact-info, .social-media-info, .address-info{
-    list-style: none;
+
+.footer-info ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.contact-info > li, .social-media-info > li, .address-info > li {
-    margin: 0.25rem;
+
+.footer-info ul li {
+    margin-bottom: 10px;
 }
-.copyright{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid rgb(83, 83, 83);
+
+.footer-info ul li b {
+    font-weight: bold;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #ffffff;
 }

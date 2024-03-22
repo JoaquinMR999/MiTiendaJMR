@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import * as PRODUCT_API from '../../api/product';
 import { v4 as uuid } from "uuid";
 
-//Thunks
 export const addProductThunk = createAsyncThunk("products/addProduct", async (product) => {
     try {
         const id = uuid();

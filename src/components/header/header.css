@@ -1,21 +1,24 @@
 .header{
     background-color: rgb(14, 13, 24);
         color: rgb(149, 194, 235);
+        height: 6.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 .header-item-list{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4rem;
-    margin: 0;
+    margin-top: 0;
     padding: 0;
 } 
-.list-item{
+.headerLi{
     margin: 0 0.6rem 0 0.6rem;
     cursor: pointer;
 }
-.list-item:hover{
+.headerLi:hover{
     color: rgb(40, 147, 219);
     transition: ease-in-out;
 }
@@ -24,7 +27,7 @@
     border-radius: 1rem;
     padding: 0.5rem;
 }
-.cart-item-count {
+.contadorCart {
     position: relative;
     top: -1rem;
     right: 0.2rem;
@@ -33,4 +36,12 @@
     padding: 4px;
     border-radius: 50%;
     font-size: 12px;
+}
+.icono {
+    color: white; 
+    font-size: 44px; 
+    transition: color 0.3s ease; 
+}
+.icono:hover {
+    color: #1e395a; 
 }

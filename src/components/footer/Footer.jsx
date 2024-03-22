@@ -7,23 +7,23 @@ export default function Footer() {
             <section className="footer-info">
                 <ul className="contact-info">
                     <li><b>Contacto</b></li>
-                    <li>Email: info@mitienda.com</li>
-                    <li>Teléfono: +34 123 456 789</li>
+                    <li>Email: Joaquin@mitienda.com</li>
+                    <li>Teléfono: +25 232312312</li>
                 </ul>
                 <ul className="social-media-info">
-                    <li><b>Redes Sociales</b></li>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
+                    <li><b>RR SS</b></li>
+                    <li>Facebook...</li>
+                    <li>Twitter...</li>
+                    <li>Instagram...</li>
                 </ul>
                 <ul className="address-info">
                     <li><b>Dirección</b></li>
                     <li>Calle Principal, 123</li>
-                    <li>Ciudad, París</li>
+                    <li>Cordoba, España</li>
                 </ul>
             </section>
             <section className="copyright">
-                <p>© 2023 MiTienda. Todos los derechos reservados</p>
+                <p>© Tienda de Joaquin.</p>
             </section>
         </div>
     )

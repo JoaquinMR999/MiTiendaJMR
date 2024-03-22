@@ -1,31 +1,12 @@
 .button-6 {
-    align-items: center;
-    background-color: #929292;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: rgba(0, 0, 0, 0.85);
-    cursor: pointer;
-    display: center;
-    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    width: 100%;
-    justify-content: center;
-    line-height: 0.7;
-    margin: 20;
-    min-height: 3rem;
-   
-    padding-top: 10px;
-    position:relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
+  background-color: rgb(40, 147, 219);
+  color: aliceblue;
+  height: 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-color: white;
+  cursor: pointer;
+  margin-top: 1.5rem;
   }
   
   .button-6:hover,

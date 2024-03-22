@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
 import { Link, useParams } from "react-router-dom";
 import { ThemeContext } from "../../context/ThemeContext";
-import useProducts from "../../hooks/useProducts";
 import "./productDetails.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductDetailsThunk } from "../../redux/reducers/productsReducer";
+import BackButton from "../backbutton/BackButton.jsx";
 
 const ProductDetails = ({ addToCart }) => {
   const { theme } = useContext(ThemeContext);
@@ -19,24 +19,30 @@ const ProductDetails = ({ addToCart }) => {
   useEffect(() => {
     const fetchProductDetails = async () => {
       setLoading(true);
-      setTimeout(async () => {
+      try {
         await dispatch(getProductDetailsThunk(id));
+      } catch (error) {
+        console.error("Error fetching product details:", error);
+      } finally {
         setLoading(false);
-      }, 1000);
+      }
     };
     fetchProductDetails();
-  }, [dispatch]);
+  }, [dispatch, id]);
 
+  // Render loading spinner
   if (loading) {
     return (
       <div className="product-details-container">
-        <RingLoader size={150} color="#2893db" loading={loading} />
+        <RingLoader size={80} color="#2893db" loading={loading} />
       </div>
     );
   }
+
   if (!product) {
     return <div>Producto no encontrado</div>;
   }
+
   return (
     <div className="product-details-container">
       <section className={`product-details-section ${theme}`}>
@@ -46,9 +52,6 @@ const ProductDetails = ({ addToCart }) => {
             src={product.image}
             alt={product.title}
           />
-          <Link className={`volver-link ${theme}`} to={"/"}>
-            Volver
-          </Link>
         </article>
         <article className="details-content">
           <h3>{product.title}</h3>
@@ -60,6 +63,7 @@ const ProductDetails = ({ addToCart }) => {
           >
             Agregar al Carrito
           </button>
+          <BackButton />
         </article>
       </section>
     </div>

@@ -35,16 +35,16 @@
 .addProductButton {
     background-color: rgb(40, 147, 219);
     color: aliceblue;
-    height: 2rem;
+    height: 4rem;
     width: 100%;
     border-radius: 0.5rem;
     border-color: white;
     cursor: pointer;
 }
-.volver-link {
-    color: var(--text-color-light);
-    text-decoration: none;
-}
-.volver-link.dark {
-    color: var(--text-color-dark);
+.addProductButton:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
 }

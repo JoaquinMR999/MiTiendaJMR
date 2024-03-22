@@ -4,6 +4,8 @@ import "./cardComponent.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 
+
+
 const CardComponent = ({
   id,
   title,
@@ -15,10 +17,12 @@ const CardComponent = ({
 }) => {
   const { user } = useAuth();
   const { theme } = useContext(ThemeContext);
-  const { isLoggedIn } = useAuth();
+  
 
-  const truncatedTitle =
-    title.slice(0, 15) + (title.length > 20 ? "..." : "");
+
+  const handleClickDetails = async () => {
+    getProductDetails();
+  }; 
 
   const handleOnEdit = () => {
     onEdit();
@@ -26,10 +30,10 @@ const CardComponent = ({
 
   const handleAddToCart = () => {
     const product = {
-        id,
-        title,
-        price,
-        image
+      id,
+      title,
+      price,
+      image
     };
     addToCart(product);
   };
@@ -38,33 +42,33 @@ const CardComponent = ({
     <section className={`card-container ${theme}`}>
       <article className="card-header">
         <img className="card-image" src={image} alt={title} />
-        <h3>{truncatedTitle}</h3>
+        <h3>{title}</h3>
       </article>
       <article className="price-container">
         <h3 className="price">${price}</h3>
       </article>
-      {isLoggedIn && (
+      {user && (
         <div>
-          <button id="detailsButton">
-            <Link to={`/product/${id}`} className="link_style_none">
-              Detalles...
-            </Link>
-          </button>
+        
+          <Link to={`/product/${id}`} className="button-6"><button id="detailsButton" className="detailsButton">
+            Mostrar mas detalles...
+
+          </button></Link>
           <button
             className="addProductButton"
-            onClick={handleAddToCart} 
+            onClick={handleAddToCart}
           >
-            Añadir al carrito
+            Pulsa para añadir al carro
           </button>
         </div>
       )}
-      {user && user.role === "admin" && (
+      {user?.role === "admin" && (
         <ul className="admin_utils">
           <li>
-            <i className="fa-solid fa-pencil" onClick={handleOnEdit}></i>
+            <i className="fa fa-pencil" onClick={handleOnEdit}></i>
           </li>
           <li>
-            <i className="fa-solid fa-trash-can" onClick={onDelete}></i>
+            <i className="fa fa-trash-can" onClick={onDelete}></i>
           </li>
         </ul>
       )}

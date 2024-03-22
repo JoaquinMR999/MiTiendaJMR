@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CardComponent from "../cardComponent/CardComponent";
 import "./cardList.css";
 import { useAuth } from "../../context/AuthContext";
-import useProducts from "../../hooks/useProducts";
 import ModalComponent from "../modalComponent/ModalComponent";
 import { RingLoader } from "react-spinners";
 import { getAllProducts, getAllProductsThunk, removeProductThunk, addProductThunk, editProductThunk} from "../../redux/reducers/productsReducer";

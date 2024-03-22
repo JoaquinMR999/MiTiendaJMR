@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react';
-import Header from './components/header2/Header';
+import Header from './components/header/Header';
 import Discount from './components/discount/DiscountMessage';
 import Footer from './components/footer/Footer';
 import CardList from './components/cardList/CardList';
@@ -21,6 +20,7 @@ function App() {
 
   const { theme } = useContext(ThemeContext);
   const { user, isLoggedIn, login, logout } = useAuth();
+
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
