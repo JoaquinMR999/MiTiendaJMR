@@ -1,20 +1,17 @@
 import React from "react";
 import './ModalComponent.css';
 
-const ModalComponent = ({ isOpen, onClose, onCloseModal, onHandleInputChange, onSubmit, title, price, description, image, category, id }) => {
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        onSubmit();
-        onClose();
-    }
-  return (
-    <div className={`modal ${isOpen ? 'open' : 'closed'}`}>
+const ModalComponent = ({ isOpen, onClose, onHandleInputChange, onSubmit, title, price, description, image, category, id }) => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    onSubmit();
+    onClose();
+  };
+
+  return isOpen && (
+    <div className="modal open">
       <div className="modal-content">
-        {id === null ? (
-          <h2>Nuevo Producto</h2>
-        ): (
-          <h2>Modificar Producto</h2>
-        )}
+        <h2>{id === null ? "Nuevo Producto" : "Modificar Producto"}</h2>
         <form onSubmit={handleFormSubmit}>
           <ul className="modal_inputs">
             <li>
@@ -47,7 +44,6 @@ const ModalComponent = ({ isOpen, onClose, onCloseModal, onHandleInputChange, on
             <button className="cancelBtn" type="button" onClick={onClose}>Cancelar</button>
           </section>
         </form>
-        
       </div>
     </div>
   );

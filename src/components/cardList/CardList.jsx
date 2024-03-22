@@ -3,10 +3,9 @@ import CardComponent from "../cardComponent/CardComponent";
 import "./cardList.css";
 import { useAuth } from "../../context/AuthContext";
 import ModalComponent from "../modalComponent/ModalComponent";
-import { RingLoader } from "react-spinners";
-import { getAllProducts, getAllProductsThunk, removeProductThunk, addProductThunk, editProductThunk} from "../../redux/reducers/productsReducer";
+import { BounceLoader } from "react-spinners";
+import { getAllProductsThunk, removeProductThunk, addProductThunk, editProductThunk} from "../../redux/reducers/productsReducer";
 import { useDispatch, useSelector } from "react-redux";
-
 const CardList = ({ filter, addToCart }) => {
   const dispatch = useDispatch();
   const { user } = useAuth();
@@ -34,7 +33,6 @@ const CardList = ({ filter, addToCart }) => {
 
   const handleAddNewProduct = () => {
     setEditedProduct({id:null, title: "", price: "", description: ""});
-    console.log("Edited Product After Adding New Product:", editedProduct);
     setIsModalOpen(true);
   };
 
@@ -84,7 +82,7 @@ const CardList = ({ filter, addToCart }) => {
   return (
     <div className="card-list-container">
       {loading ? (
-        <RingLoader
+        <BounceLoader
           size={150}
           color="#2893db"
           loading={loading}
